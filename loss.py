@@ -4,7 +4,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torchvision
 import torchvision.transforms as transforms
-from main import device
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 validation_model = torchvision.models.vgg16(pretrained=True)
 validation_model.classifier = nn.Identity()

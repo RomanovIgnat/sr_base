@@ -4,7 +4,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torchvision
 import torchvision.transforms as transforms
-from main import device
+
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
 
 def make_model(parent=False):
