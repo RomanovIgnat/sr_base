@@ -4,7 +4,7 @@ import torch.nn as nn
 import torch.nn.functional as F
 import torchvision
 import torchvision.transforms as transforms
-from main import device
+
 
 def PSNRmetrics(x, y, model):
     y_pred = model(x)
