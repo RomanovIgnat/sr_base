@@ -28,6 +28,7 @@ train_loss = []
 test_accuracy = []
 
 for epoch in range(num_epochs):
+    print(epoch)
 
     base_model.train(True)
     for i, data in enumerate(trainloader):
